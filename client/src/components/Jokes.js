@@ -11,7 +11,7 @@ class Users extends Component {
     const token = localStorage.getItem('jwt');
     const requestOptions = { headers: { authorization: token } };
     axios
-      .get(`http://localhost:8000/api/jokes`, requestOptions)
+      .get(`http://localhost:5000/api/jokes`, requestOptions)
       .then(response => this.setState({ jokes: response.data }))
       .catch(error => console.log(error));
   }
